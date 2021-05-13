@@ -1,18 +1,19 @@
-package test.GamePieceTests;
+package GamePieces;
+
+import javafx.util.Pair;
+import org.junit.Test;
+
+import java.util.HashSet;
+import java.util.Set;
+
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
 import GamePieces.King;
 
-import javafx.util.Pair;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.DisplayName;
-import org.junit.jupiter.api.RepeatedTest;
-import org.junit.jupiter.api.Test;
 
-import java.util.ArrayList;
-import java.util.HashSet;
-import java.util.Set;
 
 public class KingTest {
 
@@ -26,6 +27,7 @@ public class KingTest {
     @Test
     @DisplayName("get all possible moves")
     public void testGetMovesInsideBoard() {
+        king = new King(4,4,"black");
         king.setPosition(new Pair<>(4,4));
         Set<Pair<Integer,Integer>> movearray = new HashSet<>();
 
@@ -41,5 +43,4 @@ public class KingTest {
         assertEquals(movearray, new HashSet<>(king.getPossibleMoves()),
                 "Regular multiplication should work");
     }
-
 }
