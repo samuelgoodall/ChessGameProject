@@ -1,9 +1,5 @@
 package GamePieces;
-
-
-
 import javafx.util.Pair;
-
 import java.util.ArrayList;
 
 public class Peasant extends GamePiece{
