@@ -12,4 +12,5 @@ module ChessGameJavaFx {
 
     exports org.openjfx;
     exports GamePieces;
+    exports GamePieces.tests;
 }
