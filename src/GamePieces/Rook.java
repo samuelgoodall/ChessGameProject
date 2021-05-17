@@ -10,15 +10,13 @@ import java.util.ArrayList;
 
 public class Rook extends GamePiece{
 
-    public Rook(int posX, int posY, String colour) {
+    public Rook(int posX, int posY, GamePiece.colourEnum colour) {
         super(posX, posY, colour);
     }
 
     @Override
     public ArrayList<Pair<Integer, Integer>> getPossibleMoves() {
         ArrayList<Pair<Integer, Integer>> movearray = new ArrayList<>();
-
-
 
         int x = position.getKey();
         int y = position.getValue();
@@ -32,8 +30,6 @@ public class Rook extends GamePiece{
             }
 
         }
-
-
 
         movearray.remove(0);
         System.out.println(movearray);
