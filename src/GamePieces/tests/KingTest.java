@@ -18,18 +18,16 @@ import org.junit.jupiter.api.DisplayName;
 
 public class KingTest extends GamePieceTest{
 
-    private King king;
+
 
     @BeforeEach
-    public void setUp() {
-        king = new King(4,4,GamePiece.colourEnum.black);
+    public void setUp() throws Exception {
+        gamePiece = new King(4,4,GamePiece.colourEnum.black);
+        super.setUp();
     }
 
     @Override
     public void testGetMovesInsideBoard() {
-
-        king.setPosition(new Pair<>(4,4));
-        Set<Pair<Integer,Integer>> movearray = new HashSet<>();
 
         movearray.add(new Pair<>(4,5 ));
         movearray.add(new Pair<>(5,5 ));
@@ -40,7 +38,6 @@ public class KingTest extends GamePieceTest{
         movearray.add(new Pair<>(5,4 ));
         movearray.add(new Pair<>(5,3 ));
 
-        assertEquals(movearray, new HashSet<>(king.getPossibleMoves()),
-                "Regular multiplication should work");
+        super.testGetMovesInsideBoard();
     }
 }

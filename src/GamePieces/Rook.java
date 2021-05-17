@@ -16,6 +16,7 @@ public class Rook extends GamePiece{
 
     @Override
     public ArrayList<Pair<Integer, Integer>> getPossibleMoves() {
+
         ArrayList<Pair<Integer, Integer>> movearray = new ArrayList<>();
 
         int x = position.getKey();
@@ -28,7 +29,6 @@ public class Rook extends GamePiece{
             if(i!=position.getValue()){
                 movearray.add(new Pair<>(x, i));
             }
-
         }
 
         movearray.remove(0);
