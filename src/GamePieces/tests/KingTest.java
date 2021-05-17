@@ -1,5 +1,6 @@
 package GamePieces.tests;
 
+import GamePieces.GamePiece;
 import javafx.util.Pair;
 import org.junit.Test;
 
@@ -15,19 +16,18 @@ import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.DisplayName;
 
 
-public class KingTest {
+public class KingTest extends GamePieceTest{
 
     private King king;
 
     @BeforeEach
     public void setUp() {
-        king = new King(4,4,"black");
+        king = new King(4,4,GamePiece.colourEnum.black);
     }
 
-    @Test
-    @DisplayName("get all possible moves")
+    @Override
     public void testGetMovesInsideBoard() {
-        king = new King(4,4,"black");
+
         king.setPosition(new Pair<>(4,4));
         Set<Pair<Integer,Integer>> movearray = new HashSet<>();
 

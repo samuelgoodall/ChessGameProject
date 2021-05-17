@@ -6,7 +6,7 @@ import java.util.ArrayList;
 
 public class King extends GamePiece{
 
-    public King(int posX, int posY, String colour) {
+    public King(int posX, int posY, colourEnum colour) {
         super(posX, posY, colour);
     }
 

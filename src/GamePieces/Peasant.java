@@ -4,7 +4,7 @@ import java.util.ArrayList;
 
 public class Peasant extends GamePiece{
 
-    public Peasant(int posX, int posY,String colour) {
+    public Peasant(int posX, int posY,GamePiece.colourEnum colour) {
         super(posX, posY,colour);
     }
 
@@ -14,7 +14,7 @@ public class Peasant extends GamePiece{
         ArrayList<Pair<Integer, Integer>> movearray = new ArrayList<>();
         int sign = 1;
         int moved=0;
-        if(colour.equals("black")){
+        if(colour.equals(colourEnum.black)){
             sign = -1;
         }
         if(!wasMoved){
