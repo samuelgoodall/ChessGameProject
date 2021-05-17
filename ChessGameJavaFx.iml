@@ -49,7 +49,6 @@
         <SOURCES />
       </library>
     </orderEntry>
-    <orderEntry type="library" exported="" name="lib" level="project" />
     <orderEntry type="module-library">
       <library name="testng">
         <CLASSES>
@@ -65,5 +64,6 @@
         <SOURCES />
       </library>
     </orderEntry>
+    <orderEntry type="library" name="lib" level="project" />
   </component>
 </module>
