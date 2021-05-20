@@ -27,17 +27,23 @@ public class KingTest extends GamePieceTest{
     }
 
     @Override
-    public void testGetMovesInsideBoard() {
+    public void getPossibleMoves() {
+        super.getPossibleMoves();
+    }
 
-        movearray.add(new Pair<>(4,5 ));
-        movearray.add(new Pair<>(5,5 ));
-        movearray.add(new Pair<>(3,5 ));
-        movearray.add(new Pair<>(4,3 ));
-        movearray.add(new Pair<>(3,3 ));
-        movearray.add(new Pair<>(3,4 ));
-        movearray.add(new Pair<>(5,4 ));
-        movearray.add(new Pair<>(5,3 ));
-
-        super.testGetMovesInsideBoard();
+    @Override
+    public void testGetMovesInsideBoard(int x, int y) {
+        x--;
+        y--;
+        for(int i =0; i<3; i++){
+            for(int b = 0; b<3; b++){
+                if((x+i)>=0&&(x+i)<8&&(y+b)>=0&&(y+b)<8&&(b!=1||i!=1)){
+                    movearray.add(new Pair<>(x+i,y+b));
+                }
+            }
+        }
+        x++;
+        y++;
+        super.testGetMovesInsideBoard(x,y);
     }
 }

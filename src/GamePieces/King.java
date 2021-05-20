@@ -25,7 +25,6 @@ public class King extends GamePiece{
             }
         }
         movearray.remove(0);
-        System.out.println(movearray);
         return movearray;
     }
 }

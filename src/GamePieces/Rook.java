@@ -10,7 +10,7 @@ import java.util.ArrayList;
 
 public class Rook extends GamePiece{
 
-    public Rook(int posX, int posY, GamePiece.colourEnum colour) {
+    public Rook(int posX, int posY, colourEnum colour) {
         super(posX, posY, colour);
     }
 
@@ -31,8 +31,6 @@ public class Rook extends GamePiece{
             }
         }
 
-        movearray.remove(0);
-        System.out.println(movearray);
         return movearray;
     }
 }

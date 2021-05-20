@@ -8,20 +8,21 @@ public abstract class GamePiece {
     protected Pair<Integer,Integer> position;
     protected colourEnum colour;
 
-    protected Boolean wasMoved;
+    protected Boolean initialPosition;
 
     public GamePiece(int posX, int posY,colourEnum colour){
         position = new Pair<>(posX,posY);
 
         this.colour= colour;
-        this.wasMoved=false;
+        this.initialPosition = true;
+
     }
 
     public abstract ArrayList<Pair<Integer, Integer>> getPossibleMoves();
 
     public void setPosition(Pair<Integer,Integer> position){
 
-        wasMoved = true;
+        initialPosition = true;
         this.position = position;
     }
 
@@ -29,4 +30,21 @@ public abstract class GamePiece {
         black,
         white
     }
+
+    public colourEnum getColour(){
+        return colour;
+    }
+
+    public void setColour(colourEnum colour){
+        this.colour=colour;
+    }
+
+    public Boolean getInitialPosition(){
+        return initialPosition;
+    }
+
+    public Pair<Integer,Integer> getPosition(){
+        return position;
+    }
+
 }
